@@ -1,0 +1,915 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: linear-gradient(to right, black, #252526, #252526, black);
+    background-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+body section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    z-index: 3;
+    background-color: black;
+    box-shadow: 0px 5px 11px #000;
+    width: 100%;
+}
+
+#logo img {
+    max-height: 57px;
+    width: 103;
+    overflow: visible;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+
+ul li {
+    display: flex;
+    padding: 10px 20px;
+    text-shadow: 0px 0px 4px black;
+}
+
+#home {
+    flex-direction: column;
+}
+
+ul li ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+ul li ul li {
+    padding: 10px 0px;
+    color: #fff;
+}
+
+ul li:hover ul li a, ul li:hover ul li a:visited, ul li:hover ul li {
+    color: #fff;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    position: relative;
+    padding: 5% 0%;
+}
+
+main article {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    color: #ffffff;
+    z-index: 1;
+    text-shadow: 2px 2px 5px black;
+}
+
+main figure {
+    z-index: 2;
+}
+
+main figure img {
+    height: 300px;
+    width: auto;
+    box-shadow: 3px 3px 11px #000;
+}
+
+/* SIMS */
+
+#gradiente1 {
+    background: linear-gradient(to top, #fff, transparent);
+    height: 100px;
+    min-width: 100%
+}
+
+#sims {
+    min-width: 100%;
+    color: #13307e;
+    background-color: #fff;
+}
+
+#sims #contenedor-sims {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+#contenedor-sims article {
+    background-color: #13307e;
+    color: #fff;
+    padding: 5% 5% 0%;
+    border-radius: 30px;
+}
+
+#sims #contenedor-sims figure {
+    display: flex;
+    justify-content: center;
+}
+
+#sims #contenedor-sims article figure img {
+    border-radius: 10px;
+}
+
+section h2 {
+    font-size: 70px;
+    text-align: center;
+    margin: 30px 0px 0px;
+}
+
+#sims h2 {
+    text-shadow: 1px 1px 10px #b1b1b1;
+}
+
+/* APECTOS DEL JUEGO */
+
+#aspectos {
+    background: linear-gradient(to right, black, #1d1d5a, black);
+    padding: 40px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 10px #252525
+}
+
+#aspectos h2 {
+    padding: 40px;
+    color: #fff;
+}
+
+#aspectos .contenedor-aspecto-ind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#aspectos .contenedor-aspecto-ind figure {
+    overflow: hidden;
+    max-height: 250px;
+    max-width: 250px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    margin-bottom: 30px;
+}
+
+#aspectos .contenedor-aspecto-ind h3 {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    color: #ffffff;
+    padding: 50px
+}
+
+footer #icons a:visited {
+    color: #fff;
+}
+
+footer p {
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+/* MEDIA QUERYS */
+
+/* LANDSCAPE */
+
+@media (max-height: 420px) and (max-width: 800px) {
+    body section {
+        display: flex;
+        flex-direction: column;
+    }
+    body section header {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 100%;
+        max-width: 14%;
+        padding: 5px 5px;
+        background-color: #000;
+    }
+    body section header img {
+        margin-top: 10px;
+        max-width: 70px;
+    }
+    header ul {
+        display: flex;
+        flex-direction: column;
+    }
+    header ul li {
+        font-size: 10px;
+        margin: 20% 0;
+        padding: 0;
+    }
+    header ul li a:visited {
+        color: #ffffff
+    }
+    main {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 100%;
+        width: 100%;
+        margin-left: 5%;
+        padding-left: 5%;
+        background-image: url("../img/vecindario-bn.png");
+        background-repeat: no-repeat;
+    }
+    main figure {
+        position: absolute;
+        z-index: 2;
+        left: 15%;
+        /* antes era 11% */
+        top: 5%
+    }
+    main figure img {
+        width: 100px;
+        height: auto;
+    }
+    main article {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+        min-width: 80%;
+        z-index: 2;
+    }
+    main article h1 {
+        display: flex;
+        align-items: center;
+        /* margin: 60px 0 90px; */
+        padding-left: 100px;
+    }
+    main article p {
+        padding-top: 7%;
+    }
+    #gradiente1 {
+        background: linear-gradient(to top, #fff, transparent);
+        height: 100px;
+        min-width: 100%
+    }
+    #sims {
+        min-width: 90%;
+        font-weight: 700;
+        background-color: #fff;
+        text-align: center;
+        margin-left: 10%;
+    }
+    #sims h2 {
+        font-size: 50px;
+        text-align: center;
+        margin: 30px 0px;
+    }
+    #sims #contenedor-sims {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px 50px;
+        margin-left: 4%;
+    }
+    #sims #contenedor-sims figure {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        height: 250px;
+        width: 100px;
+    }
+    #sims #contenedor-sims figure img {
+        height: 250px;
+        width: 150px;
+    }
+    #sims #contenedor-sims article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+    }
+    #sims #contenedor-sims article figure {
+        overflow: hidden;
+        height: 90px;
+        width: 200px;
+    }
+    #sims #contenedor-sims article figure img {
+        height: 90px;
+        width: 200px;
+    }
+    #aspectos {
+        width: 90%;
+        margin-left: 10%;
+        padding: 40px;
+        color: #fff;
+    }
+    #aspectos h2 {
+        font-size: 50px;
+        text-align: center;
+        margin: 30px 0px;
+    }
+    #aspectos .contenedor-aspecto-ind figure {
+        overflow: hidden;
+        max-height: 250px;
+        max-width: 250px;
+        border: 3px solid #fff;
+        border-radius: 100%;
+        margin-bottom: 30px;
+    }
+    #aspectos .contenedor-aspecto-ind h3 {
+        margin-bottom: 10px;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 80px;
+        padding-right: 50px;
+        margin-left: 10%;
+    }
+    footer i {
+        size: 10px;
+        margin: 0 10px;
+    }
+    footer #icons a:visited {
+        color: #fff;
+    }
+    footer p {
+        font-size: 12px !important;
+        font-weight: 300;
+        margin-top: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 560px) and (min-height:300px) {
+    header {
+        position: fixed;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3% 3% 3% 3%;
+        z-index: 3;
+        background-color: black;
+    }
+    header figure img {
+        height: 40px;
+    }
+    header i {
+        color: #fff;
+        padding: 3%;
+    }
+    header ul {
+        display: none;
+    }
+    header ul li {
+        overflow: visible;
+        justify-content: center;
+        width: 10px;
+        text-shadow: 2px 2px 10px #4b4b4b;
+    }
+    header ul li:nth-child(1) {
+        border-top: 2px solid #0044ff;
+        width: 33.33%;
+    }
+    header ul li:nth-child(2) {
+        border-top: 2px solid#ffe600;
+        width: 33.33%;
+    }
+    header ul li:nth-child(3) {
+        border-top: 2px solid #cc0088;
+        width: 33.33%;
+    }
+    header ul li:nth-child(4) {
+        border-top: 2px solid #e20000;
+        width: 50%;
+    }
+    header ul li:nth-child(5) {
+        border-top: 2px solid #108600;
+        width: 50%;
+    }
+    header ul li a:visited {
+        color: #ffffff
+    }
+    #boton-menu-mobile {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        color: #f3f3f3;
+        font-size: 20px;
+        margin-right: 5vw;
+        z-index: 2;
+    }
+    .abrir-menu-mobile-flex {
+        display: flex;
+    }
+    .abrir-menu-mobile-none {
+        display: none;
+    }
+    .cerrar-menu-mobile-none {
+        display: none;
+    }
+    .cerrar-menu-mobile-flex {
+        display: flex;
+    }
+    .menu-oculto-desktop {
+        display: none;
+    }
+    .menu-oculto-mobile #abrir-menu-mobile {
+        display: flex;
+    }
+    .menu-oculto-mobile #cerrar-menu-mobile {
+        display: none;
+    }
+    .menu-oculto-mobile {
+        display: none;
+    }
+    .mostrar-menu-mobile {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 3;
+        top: 8%;
+        font-size: 30px;
+        height: 100vh;
+        width: 100vw;
+        color: #fff;
+        background-color: #000;
+        margin: 0;
+        padding: 8% 0 30% 0;
+    }
+    .mostrar-menu-mobile a, .mostrar-menu-mobile a:visited {
+        color: #fff;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 25%;
+    }
+    main article {
+        padding: 0px 25px;
+    }
+    h1 {
+        text-align: center;
+        margin: 20px 0px;
+    }
+    #gradiente1 {
+        background: linear-gradient(to top, #fff, transparent);
+        height: 100px;
+        min-width: 100%
+    }
+    #sims {
+        min-width: 100%;
+        font-weight: 700;
+        background-color: #fff;
+        text-align: center;
+    }
+    #sims h2 {
+        font-size: 50px;
+        text-align: center;
+        margin: 30px 0px;
+    }
+    #sims #contenedor-sims {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px 50px;
+    }
+    #sims #contenedor-sims figure {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        height: 250px;
+        width: 100px;
+    }
+    #sims #contenedor-sims figure img {
+        height: 250px;
+        width: 150px;
+    }
+    #sims #contenedor-sims article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 10% 2%;
+    }
+    #sims #contenedor-sims article figure {
+        overflow: hidden;
+        height: 90px;
+        width: 200px;
+    }
+    #sims #contenedor-sims article figure img {
+        height: 90px;
+        width: 200px;
+        /* 
+        box-shadow: 2px 2px 2px #000; */
+    }
+    #aspectos {
+        padding: 40px;
+        color: #fff;
+    }
+    #aspectos h2 {
+        font-size: 50px;
+        text-align: center;
+        margin: 30px 0px;
+    }
+    #aspectos .contenedor-aspecto-ind figure {
+        overflow: hidden;
+        max-height: 250px;
+        max-width: 250px;
+        border: 3px solid #fff;
+        border-radius: 100%;
+        margin-bottom: 30px;
+    }
+    #aspectos .contenedor-aspecto-ind h3 {
+        margin-bottom: 10px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        color: #ffffff;
+        padding: 40px
+    }
+    footer i {
+        margin: 10px;
+    }
+    footer #icons a:visited {
+        color: #fff;
+    }
+    footer p {
+        font-size: 12px;
+        margin-top: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+/* TABLETS */
+
+@media (min-width: 560px) and (min-height:280px) {
+    body section {
+        overflow: hidden;
+    }
+    header {
+        position: fixed;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 80px;
+        width: 100%;
+        padding: 2% 3% 1% 3%;
+        overflow: visible;
+    }
+    header .menu-fixed-desktop #home:hover, header .menu-fixed-desktop #home a:hover, header .menu-fixed-desktop #home:hover a:visited:hover, .menu-oculto-desktop .celda-desplegada-home a:hover, .menu-oculto-desktop .celda-desplegada-home a:visited:hover {
+        color: #245efd;
+    }
+    header .menu-fixed-desktop #historia:hover, header .menu-fixed-desktop #historia a:hover, header .menu-fixed-desktop #historia:hover a:visited:hover, .menu-oculto-desktop .celda-desplegada-historia a:hover, .menu-oculto-desktop .celda-desplegada-historia a:visited:hover {
+        color: #ffe600;
+    }
+    header .menu-fixed-desktop #musica:hover, header .menu-fixed-desktop #musica:hover a:visited:hover {
+        color: #cc0088;
+    }
+    header .menu-fixed-desktop #expansiones:hover, header .menu-fixed-desktop #expansiones a:hover, header .menu-fixed-desktop #expansiones:hover a:visited:hover, .menu-oculto-desktop .celda-desplegada-expansiones a:hover, .menu-oculto-desktop .celda-desplegada-expansiones a:visited:hover {
+        color: #e20000
+    }
+    header .menu-fixed-desktop #comprar:hover, header .menu-fixed-desktop #comprar a:hover, header .menu-fixed-desktop #comprar:hover a:visited:hover {
+        color: #108600;
+    }
+    header ul li a, header ul li a:visited {
+        color: #ffffff
+    }
+    header ul li {
+        font-size: 10px;
+        z-index: 2;
+    }
+    .menu-oculto-desktop {
+        display: none;
+    }
+    .menu-oculto-mobile {
+        display: none;
+    }
+    #boton-menu-mobile {
+        display: none
+    }
+    ul li:hover .menu-oculto-desktop {
+        display: flex;
+        z-index: 1;
+        padding: 10px 10px;
+        position: absolute;
+        top: 80%;
+    }
+    ul li:hover .menu-oculto-desktop li {
+        color: #fff;
+        justify-content: flex-start;
+        background-color: #000;
+        padding: 10px 10px;
+        box-shadow: 0px 3px 25px #000;
+    }
+    #home ul li:hover .menu-oculto-desktop li a {
+        color: #fff;
+    }
+    #home ul li:hover .menu-oculto-desktop li a:hover {
+        color: #245efd;
+    }
+    #home ul li:hover .menu-oculto.desktop li a:visited {
+        color: #fff;
+    }
+    main {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/vecindario-bn.png");
+        background-repeat: no-repeat;
+        background-size: auto 200vh;
+        background-position: bottom;
+        min-height: 100vh;
+    }
+    main article {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        max-width: 60%;
+        padding-top: 80px;
+        align-items: flex-start;
+        z-index: 2;
+    }
+    main article p {
+        margin-right: 30px;
+    }
+    .sombra-art {
+        display: flex;
+        position: absolute;
+        top: 0vh;
+        left: 0vh;
+        z-index: 1;
+        width: 170vh;
+        height: 100%;
+        background: linear-gradient(to right, black, transparent);
+    }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        padding-top: 5%;
+    }
+    #sims {
+        padding: 2% 10% 0%;
+    }
+    #sims #contenedor-sims {
+        display: flex;
+        flex-direction: column;
+    }
+    #sims #contenedor-sims figure {
+        margin-bottom: 30px;
+    }
+    #sims #contenedor-sims article figure {
+        height: 100px;
+        width: 300px;
+        margin: 0% 25%;
+        margin-bottom: 20px;
+    }
+    #sims #contenedor-sims article figure img {
+        height: 100px;
+        width: 300px;
+        margin: 0px 50px;
+        /* 
+        box-shadow: 2px 2px 2px #000; */
+    }
+    footer i {
+        margin: 20px;
+    }
+    footer p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 850px) and (min-height: 650px) {
+    header {
+        position: fixed;
+    }
+    header ul li {
+        font-size: 15px;
+    }
+    .menu-oculto-mobile {
+        display: none;
+    }
+    main {
+        padding: 14% 0%;
+        min-height: 100vh;
+    }
+    main article {
+        min-width: 50vh;
+    }
+    #sims #contenedor-sims {
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 100px;
+    }
+    #sims #contenedor-sims figure {
+        height: auto;
+        width: 40%;
+        margin-bottom: 50px;
+    }
+    #sims #contenedor-sims article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sims #contenedor-sims article figure {
+        overflow: hidden;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    #contenedor-aspectos {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+    }
+    .contenedor-aspecto-ind {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+        text-align: center;
+        line-height: 25px;
+    }
+    footer i {
+        margin: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .menu-oculto-mobile {
+        display: none;
+    }
+    #gradiente1 {
+        background: linear-gradient(to top, #fff, transparent);
+        height: 100px;
+        min-width: 100%
+    }
+    #sims {
+        min-width: 100%;
+        background-color: #fff;
+        padding: 0px 100px;
+    }
+    #sims #contenedor-sims {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 50px 50px;
+    }
+    #contenedor-sims article {
+        font-weight: 300;
+    }
+    #sims #contenedor-sims figure {
+        display: flex;
+        justify-content: center;
+        /* 
+        box-shadow: 2px 2px 2px #000; */
+        margin: 0px 50px 0px 0px;
+    }
+    #crear-sim {
+        max-height: 50vh;
+    }
+    #sims #contenedor-sims article figure {
+        /* 
+        box-shadow: 2px 2px 5px #000; */
+        margin: 0px 50px 20px 50px;
+    }
+    #contenedor-sims article p:nth-child(1) {
+        text-align: left;
+    }
+    #contenedor-sims article p:nth-child(2) {
+        text-align: right;
+    }
+    #contenedor-sims article p:nth-child(3) {
+        text-align: left;
+    }
+    section h2 {
+        font-size: 70px;
+        text-align: center;
+        margin: 30px 0px;
+    }
+    #aspectos {
+        padding: 40px;
+        color: #fff;
+    }
+    #aspectos .contenedor-aspecto-ind figure {
+        overflow: hidden;
+        max-height: 250px;
+        max-width: 250px;
+        border: 3px solid #fff;
+        border-radius: 100%;
+        margin-bottom: 30px;
+    }
+    #aspectos .contenedor-aspecto-ind h3 {
+        margin-bottom: 10px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        color: #ffffff;
+        padding: 50px
+    }
+    footer i {
+        margin: 20px;
+    }
+    footer #icons a:visited {
+        color: #fff;
+    }
+    footer p {
+        margin-top: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1200px) and (min-height:650px) {
+    .menu-oculto-mobile {
+        display: none;
+    }
+    header ul li {
+        font-size: 20px;
+    }
+    main {
+        padding: /* 15% */
+        0%;
+    }
+    #logo img {
+        max-height: 57px;
+        width: 103;
+        overflow: visible;
+    }
+    main article p {
+        line-height: 10px;
+    }
+    h1 {
+        font-size: 43px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    main article p {
+        line-height: 35px;
+    }
+    #sims {
+        justify-content: center;
+        padding: 0% 15% 5%;
+    }
+    #sims h2 {
+        padding-top: 5%;
+    }
+    #aspectos .contenedor-aspecto-ind h3 {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+}

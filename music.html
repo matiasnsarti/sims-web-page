@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sims Web Page: Música</title>
+    <!-- Icono pestania -->
+    <link rel="shotcut icon" href="img/icon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/music.css" class="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos Font-Awesome -->
+    <script src="https://kit.fontawesome.com/e075a7fa24.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section id="start">
+        <header>
+            <figure id="logo">
+                <img src="img/logo.png">
+            </figure>
+            <button id="boton-menu-mobile">
+                <div class="abrir-menu-mobile-flex">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="cerrar-menu-mobile-none">
+                    <i class="fas fa-times"></i>
+                </div>
+            </button>
+            <ul class="menu-fixed-desktop">
+                <li id="home"><a href="index.html">HOME</a>
+                    <ul class="menu-oculto-desktop">
+                        <li class="celda-desplegada-home"><a href="index.html#start">Inicio</a></li>
+                        <li class="celda-desplegada-home"><a href="index.html#sims">Sims</a></li>
+                        <li class="celda-desplegada-home"><a href="index.html#aspectos">Aspectos del juego</a></li>
+                    </ul>
+                </li>
+                <li id="historia"><a href="historia.html">HISTORIA</a>
+                    <ul class="menu-oculto-desktop">
+                        <li class="celda-desplegada-historia"><a href="historia.html#el-comienzo-de-todo">El comienzo de
+                                todo</a></li>
+                        <li class="celda-desplegada-historia"><a href="historia.html#sim-city">Sim-City</a></li>
+                        <li class="celda-desplegada-historia"><a href="historia.html#nombre">Sobre el nombre...</a></li>
+                    </ul>
+                </li>
+                <li id="musica"><a href="music.html">MUSICA</a></li>
+                <li id="expansiones"><a href="expansiones.html">EXPANSIONES</a>
+                    <ul class="menu-oculto-desktop">
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#mas-vivos-que-nunca">Mas vivos que nunca</a></li>
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#house-party">House Party</a></li>
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#primera-cita">Primera cita</a></li>
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#de-vacaciones">De vacaciones</a></li>
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#animales-a-raudales">Animales a raudales</a></li>
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#superstar">Superstar</a></li>
+                        <li class="celda-desplegada-expansiones"><a href="expansiones.html#magia-potagia">Magia Potagia</a></li>
+                    </ul>
+                </li>
+                <li id="comprar"><a href="https://videojuegos.mercadolibre.com.ar/videojuegos/pc/the-sims-1/"
+                        target="_blank">¡COMPRAR!</a></li>
+            </ul>
+        </header>
+
+        <article class="menu-oculto-mobile">
+            <p><a href="index.html">HOME</a></p>
+            <p><a href="historia.html">HISTORIA</a></p>
+            <p><a href="music.html">MUSICA</a></p>
+            <p><a href="expansiones.html">EXPANSIONES</a></p>
+            <p><a href="https://videojuegos.mercadolibre.com.ar/videojuegos/pc/the-sims-1/"
+                    target="_blank">¡COMPRAR!</a></p>
+        </article>
+
+        <main>
+            <h1>Música de les Sims</h1>
+            <article>
+                <section>
+                    <p>La música es uno de los aspectos más notables que integran al juego, tanto en la primera entrega como
+                        en sus paquetes de
+                        expansión. La misma adquiere mayor protagonismo mientras se juega en el Modo Comprando y el Modo
+                        Construyendo;
+                        también se aprecia mientras se ve al vecindario o mientras se está creando un Sim. En el modo En
+                        vivo, aparecen diversas obras de diferentes estilos musicales cuando les sims se ponen a escuchar
+                        música en un estéreo o cuando tocan un instrumento.
+                    </p>
+                    <p>La mayoría de las obras que conforman al soundtrack fueron compuestas por Jerry Martin, quien
+                        trabajó en Maxis entre 1996 y 2004, donde realizó los soundtracks de los juegos SimCity 3000
+                        y SimCity 4.
+                    </p>
+                </section>
+                
+                <div id="iframe">
+                    <iframe src="https://open.spotify.com/embed/album/0sSQLHnZOm240uhrPmycuk" width="300" height="380"
+                        frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </article>
+
+            <div class="sombra-art"></div>
+        </main>
+    </section>
+    <footer>
+        <div id="icons">
+            <a href="https://www.facebook.com/TheSims" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+            <a href="https://www.instagram.com/thesims/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://twitter.com/TheSims" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+        </div>
+        <p>Diseñado por Matías Sarti</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/js.js"></script>
+</body>
+
+</html>
