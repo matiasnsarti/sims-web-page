@@ -114,8 +114,10 @@ footer {
     padding: 50px;
     z-index: 2;
 }
-
-footer #icons a:visited {
+footer i:hover {
+    color: #24dcfd
+}
+footer #icons a:visited, footer #icons a {
     color: #fff;
 }
 
@@ -388,6 +390,9 @@ footer p {
         padding: 2% 3% 1% 3%;
         overflow: visible;
     }
+    #logo a img:hover {
+        filter: contrast(40%) sepia(1) hue-rotate(140deg) saturate(1000%);
+    }
     header .menu-fixed-desktop #home:hover,  header .menu-fixed-desktop #home a:hover,header .menu-fixed-desktop #home:hover a:visited:hover, 
     .menu-oculto-desktop .celda-desplegada-home a:hover, .menu-oculto-desktop .celda-desplegada-home a:visited:hover {
         color: #245efd;
@@ -396,7 +401,7 @@ footer p {
     .menu-oculto-desktop .celda-desplegada-historia a:hover, .menu-oculto-desktop .celda-desplegada-historia a:visited:hover {
         color: #ffe600;
     }
-    header .menu-fixed-desktop #musica:hover, header .menu-fixed-desktop #musica:hover a:visited:hover {
+    header .menu-fixed-desktop #musica:hover, header .menu-fixed-desktop #musica:hover a:visited:hover, header .menu-fixed-desktop #musica:hover a:hover {
         color: #cc0088;
     }
     header .menu-fixed-desktop #expansiones:hover, header .menu-fixed-desktop #expansiones a:hover, header .menu-fixed-desktop #expansiones:hover a:visited:hover, 

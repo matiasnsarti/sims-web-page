@@ -123,7 +123,7 @@ main figure img {
 #contenedor-sims article {
     background-color: #13307e;
     color: #fff;
-    padding: 5% 5% 0%;
+    padding: 5%;
     border-radius: 30px;
 }
 
@@ -195,7 +195,7 @@ footer {
     padding: 50px
 }
 
-footer #icons a:visited {
+footer #icons a:visited, footer #icons a {
     color: #fff;
 }
 
@@ -287,7 +287,6 @@ footer p {
     }
     #sims {
         min-width: 90%;
-        font-weight: 700;
         background-color: #fff;
         text-align: center;
         margin-left: 10%;
@@ -471,12 +470,14 @@ footer p {
         z-index: 3;
         top: 8%;
         font-size: 30px;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         color: #fff;
         background-color: #000;
         margin: 0;
         padding: 8% 0 30% 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     .mostrar-menu-mobile a, .mostrar-menu-mobile a:visited {
         color: #fff;
@@ -531,7 +532,8 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10% 10% 2%;
+        padding: 10%;
+        font-weight: 300;
     }
     #sims #contenedor-sims article figure {
         overflow: hidden;
@@ -539,10 +541,8 @@ footer p {
         width: 200px;
     }
     #sims #contenedor-sims article figure img {
-        height: 90px;
         width: 200px;
-        /* 
-        box-shadow: 2px 2px 2px #000; */
+        height: auto;
     }
     #aspectos {
         padding: 40px;
@@ -602,13 +602,16 @@ footer p {
         padding: 2% 3% 1% 3%;
         overflow: visible;
     }
+    #logo a img:hover {
+        filter: contrast(40%) sepia(1) hue-rotate(140deg) saturate(1000%);
+    }
     header .menu-fixed-desktop #home:hover, header .menu-fixed-desktop #home a:hover, header .menu-fixed-desktop #home:hover a:visited:hover, .menu-oculto-desktop .celda-desplegada-home a:hover, .menu-oculto-desktop .celda-desplegada-home a:visited:hover {
         color: #245efd;
     }
     header .menu-fixed-desktop #historia:hover, header .menu-fixed-desktop #historia a:hover, header .menu-fixed-desktop #historia:hover a:visited:hover, .menu-oculto-desktop .celda-desplegada-historia a:hover, .menu-oculto-desktop .celda-desplegada-historia a:visited:hover {
         color: #ffe600;
     }
-    header .menu-fixed-desktop #musica:hover, header .menu-fixed-desktop #musica:hover a:visited:hover {
+    header .menu-fixed-desktop #musica:hover, header .menu-fixed-desktop #musica:hover a:visited:hover, header .menu-fixed-desktop #musica:hover a:hover {
         color: #cc0088;
     }
     header .menu-fixed-desktop #expansiones:hover, header .menu-fixed-desktop #expansiones a:hover, header .menu-fixed-desktop #expansiones:hover a:visited:hover, .menu-oculto-desktop .celda-desplegada-expansiones a:hover, .menu-oculto-desktop .celda-desplegada-expansiones a:visited:hover {
@@ -720,6 +723,9 @@ footer p {
     }
     footer i {
         margin: 20px;
+    }
+    footer i:hover {
+        color: #24dcfd
     }
     footer p {
         font-size: 20px;
@@ -852,22 +858,22 @@ footer p {
     }
     footer {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         background-color: black;
         width: 100%;
+        height: 125px;
         color: #ffffff;
-        padding: 50px
-    }
-    footer i {
-        margin: 20px;
+        padding: 50px 100px
     }
     footer #icons a:visited {
         color: #fff;
     }
     footer p {
-        margin-top: 20px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-shadow: 1px 1px 5px #414141;
     }
 }
 
