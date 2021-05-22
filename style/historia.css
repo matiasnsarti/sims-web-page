@@ -247,6 +247,7 @@ footer p {
         padding: 3% 3% 3% 3%;
         z-index: 3;
         background-color: black;
+        z-index: 100;
     }
     header i {
         color: #fff;
