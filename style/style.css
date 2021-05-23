@@ -64,6 +64,7 @@ ul li ul {
 ul li ul li {
     padding: 10px 0px;
     color: #fff;
+    z-index: 3;
 }
 
 ul li:hover ul li a, ul li:hover ul li a:visited, ul li:hover ul li {
@@ -192,7 +193,7 @@ footer {
     background-color: black;
     width: 100%;
     color: #ffffff;
-    padding: 50px
+    padding: 50px;
 }
 
 footer #icons a:visited, footer #icons a {
@@ -200,7 +201,6 @@ footer #icons a:visited, footer #icons a {
 }
 
 footer p {
-    margin-top: 20px;
     letter-spacing: 2px;
 }
 
@@ -240,6 +240,7 @@ footer p {
     header ul li a:visited {
         color: #ffffff
     }
+    
     main {
         flex-direction: row-reverse;
         justify-content: flex-start;
@@ -255,7 +256,6 @@ footer p {
         position: absolute;
         z-index: 2;
         left: 15%;
-        /* antes era 11% */
         top: 5%
     }
     main figure img {
@@ -274,11 +274,12 @@ footer p {
     main article h1 {
         display: flex;
         align-items: center;
-        /* margin: 60px 0 90px; */
         padding-left: 100px;
     }
     main article p {
         padding-top: 7%;
+        margin-right: 0 !important;
+        text-align: justify;
     }
     #gradiente1 {
         background: linear-gradient(to top, #fff, transparent);
@@ -319,6 +320,8 @@ footer p {
         flex-direction: column;
         align-items: center;
         padding-top: 10%;
+        font-weight: 300;
+        text-align: justify;
     }
     #sims #contenedor-sims article figure {
         overflow: hidden;
@@ -359,11 +362,13 @@ footer p {
         width: 90%;
         height: 80px;
         padding-right: 50px;
-        margin-left: 10%;
     }
     footer i {
         size: 10px;
-        margin: 0 10px;
+        margin: 0;
+    }
+    #icons {
+        width: 60%;
     }
     footer #icons a:visited {
         color: #fff;
@@ -371,7 +376,7 @@ footer p {
     footer p {
         font-size: 12px !important;
         font-weight: 300;
-        margin-top: 20px;
+        margin-top: 0px !important;
         letter-spacing: 2px;
     }
 }
@@ -384,8 +389,8 @@ footer p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 3% 3% 3% 3%;
-        z-index: 3;
+        padding: 3%;
+        z-index: 100;
         background-color: black;
     }
     header figure img {
@@ -481,6 +486,9 @@ footer p {
     }
     .mostrar-menu-mobile a, .mostrar-menu-mobile a:visited {
         color: #fff;
+        animation-name: aclarar;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in;
     }
     main {
         flex-direction: column;
@@ -570,7 +578,6 @@ footer p {
         align-items: center;
         background-color: black;
         width: 100%;
-        color: #ffffff;
         padding: 40px
     }
     footer i {
@@ -583,6 +590,8 @@ footer p {
         font-size: 12px;
         margin-top: 20px;
         letter-spacing: 2px;
+        font-weight: 300;
+        text-align: center;
     }
 }
 
@@ -719,21 +728,40 @@ footer p {
         height: 100px;
         width: 300px;
         margin: 0px 50px;
-        /* 
-        box-shadow: 2px 2px 2px #000; */
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: 125px;
+        color: #ffffff;
+        padding: 50px 100px
+    }
+    footer #icons a:visited {
+        color: #fff;
     }
     footer i {
         margin: 20px;
+        font-size: 20px;
     }
     footer i:hover {
-        color: #24dcfd
+        color: #24dcfd;
     }
     footer p {
+        
         font-size: 20px;
+        text-align: right;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-shadow: 1px 1px 5px #414141;
     }
 }
 
-@media (min-width: 850px) and (min-height: 650px) {
+@media (min-width: 820px) and (min-height: 650px) {
     header {
         position: fixed;
     }
@@ -750,6 +778,7 @@ footer p {
     main article {
         min-width: 50vh;
     }
+    
     #sims #contenedor-sims {
         justify-content: center;
         align-items: center;
@@ -784,14 +813,43 @@ footer p {
         text-align: center;
         line-height: 25px;
     }
-    footer i {
-        margin: 20px;
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: 125px;
+        color: #ffffff;
+        padding: 50px 100px
+    }
+    footer #icons a:visited {
+        color: #fff;
+    }
+    footer p {
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-shadow: 1px 1px 5px #414141;
     }
 }
 
 @media (min-width: 1000px) {
+    header {
+        animation-name: slide-from-top;
+        animation-duration: 1.5s;
+    }
     .menu-oculto-mobile {
         display: none;
+    }
+    main figure img {
+        animation-name: aumentar;
+        animation-duration: 2.5s;
+    }
+    main article {
+        animation-name: aclarar;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
     }
     #gradiente1 {
         background: linear-gradient(to top, #fff, transparent);
@@ -808,24 +866,22 @@ footer p {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 0 0 50px 50px;
+        padding: 0 50 50px 50px;
     }
     #contenedor-sims article {
         font-weight: 300;
+        animation-name: aclarar;
+        animation-duration: 3s;
     }
     #sims #contenedor-sims figure {
         display: flex;
         justify-content: center;
-        /* 
-        box-shadow: 2px 2px 2px #000; */
         margin: 0px 50px 0px 0px;
     }
     #crear-sim {
         max-height: 50vh;
     }
     #sims #contenedor-sims article figure {
-        /* 
-        box-shadow: 2px 2px 5px #000; */
         margin: 0px 50px 20px 50px;
     }
     #contenedor-sims article p:nth-child(1) {
@@ -857,25 +913,7 @@ footer p {
     #aspectos .contenedor-aspecto-ind h3 {
         margin-bottom: 10px;
     }
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: black;
-        width: 100%;
-        height: 125px;
-        color: #ffffff;
-        padding: 50px 100px
-    }
-    footer #icons a:visited {
-        color: #fff;
-    }
-    footer p {
-        letter-spacing: 1px;
-        font-weight: 300;
-        text-shadow: 1px 1px 5px #414141;
-    }
+    
 }
 
 @media (min-width: 1200px) and (min-height:650px) {
@@ -919,4 +957,31 @@ footer p {
         margin-top: 10px;
         margin-bottom: 35px;
     }
+}
+
+@keyframes slide-from-top {
+    0% {
+        background: rgba(255, 255, 255, 0);
+        top: -200px;
+    }
+    100% {
+        background: rgb(0, 0, 0);
+        top: 0px;
+    }
+}
+
+@keyframes aumentar {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 300px;
+    }
+}
+
+@keyframes aclarar {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {}
 }

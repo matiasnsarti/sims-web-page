@@ -119,15 +119,14 @@ footer {
     width: 100%;
     color: #ffffff;
     padding: 50px;
-    z-index: 2;
+    z-index: 3;
 }
 
-footer #icons a:visited, footer #icons a  {
+footer #icons a:visited, footer #icons a {
     color: #fff;
 }
 
 footer p {
-    margin-top: 20px;
     letter-spacing: 2px;
 }
 
@@ -204,11 +203,13 @@ footer p {
         width: 90%;
         height: 80px;
         padding-right: 50px;
-        margin-left: 10%;
     }
     footer i {
         size: 10px;
-        margin: 0 10px;
+        margin: 0;
+    }
+    #icons {
+        width: 60%;
     }
     footer #icons a:visited {
         color: #fff;
@@ -216,7 +217,7 @@ footer p {
     footer p {
         font-size: 12px !important;
         font-weight: 300;
-        margin-top: 20px;
+        margin-top: 0px !important;
         letter-spacing: 2px;
     }
 }
@@ -230,8 +231,7 @@ footer p {
         justify-content: space-between;
         align-items: center;
         width: 100vw;
-        padding: 3% 3% 3% 3%;
-        z-index: 3;
+        padding: 3%;
         background-color: black;
         z-index: 100;
     }
@@ -314,15 +314,20 @@ footer p {
         z-index: 3;
         top: 8%;
         font-size: 30px;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         color: #fff;
         background-color: #000;
         margin: 0;
         padding: 8% 0 30% 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     .mostrar-menu-mobile a, .mostrar-menu-mobile a:visited {
         color: #fff;
+        animation-name: aclarar;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in;
     }
     .sombra-art {
         display: flex;
@@ -341,6 +346,10 @@ footer p {
         align-items: center;
         text-align: center;
         padding-top: 12%;
+    }
+    #mas-vivos-que-nunca, #house-party, #primera-cita, #de-vacaciones, #animales-a-raudales, #superstar, #magia-potagia {
+        align-items: center;
+        margin-bottom: 20%;
     }
     main article {
         padding: 0px 25px;
@@ -390,6 +399,8 @@ footer p {
         font-size: 12px;
         margin-top: 20px;
         letter-spacing: 2px;
+        font-weight: 300;
+        text-align: center;
     }
 }
 
@@ -488,6 +499,7 @@ footer p {
     }
     #mas-vivos-que-nunca, #house-party, #primera-cita, #de-vacaciones, #animales-a-raudales, #superstar, #magia-potagia {
         align-items: center;
+        margin-bottom: 20%;
     }
     #cont-expansion {
         margin-bottom: 5%;
@@ -516,14 +528,33 @@ footer p {
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.50);
     }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: 125px;
+        color: #ffffff;
+        padding: 50px 100px
+    }
+    footer #icons a:visited {
+        color: #fff;
+    }
     footer i {
         margin: 20px;
+        font-size: 20px;
     }
     footer i:hover {
-        color: #24dcfd
+        color: #24dcfd;
     }
     footer p {
         font-size: 20px;
+        text-align: right;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-shadow: 1px 1px 5px #414141;
     }
 }
 
@@ -540,7 +571,6 @@ footer p {
     h1 {
         font-size: 40px;
         padding: 12% 12% 0%;
-        margin-bottom: 30px;
     }
     main article {
         padding-top: 0;
@@ -582,18 +612,37 @@ footer p {
     main article {
         min-width: 50vh;
     }
-    footer i {
-        margin: 20px;
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: 125px;
+        color: #ffffff;
+        padding: 50px 100px
+    }
+    footer #icons a:visited {
+        color: #fff;
+    }
+    footer p {
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-shadow: 1px 1px 5px #414141;
     }
 }
 
 @media (min-width: 1000px) {
+    header {
+        animation-name: slide-from-top;
+        animation-duration: 1.5s;
+    }
     .menu-oculto-mobile {
         display: none;
     }
     h1 {
         padding-top: 10%;
-        padding-bottom: 2%;
     }
     main article {
         min-width: 90%;
@@ -633,24 +682,21 @@ footer p {
         width: 100%
     }
     footer {
-        z-index: 2;
+        z-index: 3;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         background-color: black;
         width: 100%;
         color: #ffffff;
-        padding: 50px
+        padding: 50px 100px;
     }
     footer i {
         margin: 20px;
     }
     footer #icons a:visited {
         color: #fff;
-    }
-    footer p {
-        margin-top: 20px;
-        letter-spacing: 2px;
     }
 }
 
@@ -682,4 +728,22 @@ footer p {
     main article p {
         line-height: 35px;
     }
+}
+
+@keyframes slide-from-top {
+    0% {
+        background: rgba(255, 255, 255, 0);
+        top: -200px;
+    }
+    100% {
+        background: rgb(0, 0, 0);
+        top: 0px;
+    }
+}
+
+@keyframes aclarar {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {}
 }
