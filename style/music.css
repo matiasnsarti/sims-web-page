@@ -599,7 +599,7 @@ footer p {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (min-height:650px) {
     header {
         animation-name: slide-from-top;
         animation-duration: 1.5s;

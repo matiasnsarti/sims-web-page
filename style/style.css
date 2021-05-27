@@ -240,7 +240,9 @@ footer p {
     header ul li a:visited {
         color: #ffffff
     }
-    
+    .celda-desplegada-home, .celda-desplegada-historia, .celda-desplegada-expansiones {
+        display: none;
+    }
     main {
         flex-direction: row-reverse;
         justify-content: flex-start;
@@ -715,6 +717,10 @@ footer p {
         display: flex;
         flex-direction: column;
     }
+    .contenedor-aspecto-ind p {
+        max-width: 75%;
+
+    }
     #sims #contenedor-sims figure {
         margin-bottom: 30px;
     }
@@ -761,7 +767,7 @@ footer p {
     }
 }
 
-@media (min-width: 820px) and (min-height: 650px) {
+@media (min-width: 820px) and (min-height: 625px) {
     header {
         position: fixed;
     }
@@ -834,7 +840,7 @@ footer p {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (min-height:625px){
     header {
         animation-name: slide-from-top;
         animation-duration: 1.5s;
@@ -884,6 +890,10 @@ footer p {
     #sims #contenedor-sims article figure {
         margin: 0px 50px 20px 50px;
     }
+    #contenedor-sims article {
+        max-width: 600px;
+        
+    }
     #contenedor-sims article p:nth-child(1) {
         text-align: left;
     }
@@ -901,6 +911,12 @@ footer p {
     #aspectos {
         padding: 40px;
         color: #fff;
+    }
+    #aspectos #contenedor-aspectos {
+        flex-direction: row;
+    }
+    .contenedor-aspecto-ind{
+        max-width: 30% !important;
     }
     #aspectos .contenedor-aspecto-ind figure {
         overflow: hidden;
