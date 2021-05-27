@@ -633,7 +633,7 @@ footer p {
     }
 }
 
-@media (min-width: 1000px) and (min-height:650px) {
+@media (min-width: 1000px) and (min-height: 625px) {
     header {
         animation-name: slide-from-top;
         animation-duration: 1.5s;
@@ -706,7 +706,7 @@ footer p {
     }
 }
 
-@media (min-width: 1200px) and (min-height:650px) {
+@media (min-width: 1200px) and (min-height: 625px) {
     .menu-oculto-mobile {
         display: none;
     }

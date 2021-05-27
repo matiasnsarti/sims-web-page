@@ -590,7 +590,7 @@ footer p {
     }
 }
 
-@media (min-width: 750px) and (min-height: 650px) {
+@media (min-width: 750px) and (min-height: 625px) {
     header {
         position: fixed;
     }
@@ -632,7 +632,7 @@ footer p {
     }
 }
 
-@media (min-width: 1000px) and (min-height:650px){
+@media (min-width: 1000px) and (min-height: 625px) {
     header {
         animation-name: slide-from-top;
         animation-duration: 1.5s;
