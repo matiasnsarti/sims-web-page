@@ -306,7 +306,7 @@ footer p {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        z-index: 3;
+        z-index: 4;
         top: 8%;
         font-size: 30px;
         height: 100%;

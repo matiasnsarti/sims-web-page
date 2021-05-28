@@ -311,7 +311,7 @@ footer p {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        z-index: 3;
+        z-index: 4;
         top: 8%;
         font-size: 30px;
         height: 100%;
@@ -706,7 +706,7 @@ footer p {
     }
 }
 
-@media (min-width: 1200px) and (min-height: 625px) {
+@media (min-width: 1200px) and (min-height: 650px) {
     .menu-oculto-mobile {
         display: none;
     }
